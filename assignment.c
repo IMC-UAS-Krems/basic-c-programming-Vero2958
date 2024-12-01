@@ -79,7 +79,7 @@ int main(int argc, char *argv[]) {
     int cols = atoi(argv[2]);
 
     // Check if rows or cols equal 0
-    if (rows = 0 || cols = 0) {
+    if (rows == 0 || cols == 0) {
         printf("Incorrect usage. The parameters you provided are not positive integers\n");
         return 1;
     }
