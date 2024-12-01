@@ -5,13 +5,10 @@
 #include <time.h>
 #include <ctype.h>
 
-// Function to check if a string represents a positive integer (including 0).
-int is_positive_integer(const char *str) {
-    if (str == NULL || *str == '\0') return 0;
-    for (int i = 0; str[i] != '\0'; i++) {
-        if (!isdigit(str[i])) return 0;
-    }
-    return 1;
+// Function to check if a string represents a positive integer.
+int is_int_pos(int rows, int cols) {
+    if (rows <= 0 || cols <= 0) return 0;
+    return 1; 
 }
 
 // Function to create a dynamically allocated matrix
@@ -68,18 +65,12 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    // Validate arguments
-    if (!is_positive_integer(argv[1]) || !is_positive_integer(argv[2])) {
-        printf("Incorrect usage. The parameters you provided are not positive integers\n");
-        return 1;
-    }
-
     // Parse dimensions
     int rows = atoi(argv[1]);
     int cols = atoi(argv[2]);
 
-    // Check if rows or cols equal 0
-    if (rows == 0 || cols == 0) {
+    // Validate arguments
+    if (!is_int_pos(rows, cols)) {
         printf("Incorrect usage. The parameters you provided are not positive integers\n");
         return 1;
     }
