@@ -61,7 +61,6 @@ void free_matrix(int** matrix, int rows) {
     free(matrix);
 }
 
-// Main function
 int main(int argc, char *argv[]) {
     // Check argument count
     if (argc != 3) {
@@ -79,8 +78,8 @@ int main(int argc, char *argv[]) {
     int rows = atoi(argv[1]);
     int cols = atoi(argv[2]);
 
-    // Check dimensions
-    if (rows <= 0 || cols <= 0) {
+    // Check if rows or cols equal 0
+    if (rows = 0 || cols = 0) {
         printf("Incorrect usage. The parameters you provided are not positive integers\n");
         return 1;
     }
