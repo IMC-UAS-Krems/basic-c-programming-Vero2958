@@ -3,7 +3,6 @@
 #include <string.h>
 #include <unistd.h>
 #include <time.h>
-#include <ctype.h>
 
 // Function to check if a string represents a positive integer.
 int is_int_pos(int rows, int cols) {
